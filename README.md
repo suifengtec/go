@@ -42,9 +42,9 @@ mkdir src && mkdir bin && mkdir pkg && cd src && touch main.go && git init && gi
 ### 类型系统
 
 
-基础类型: 18种 (string,bool, byte,rune, int/uint, unit8/uint8, int16/uint16, int32/uint32, int64/unit64, float32,float64,complex64,copmlex128)
+基础类型(18种): string,bool, byte,rune, int/uint, unit8/uint8, int16/uint16, int32/uint32, int64/unit64, float32,float64,complex64,copmlex128
 
-复合类型: 8 种  (Map, Array,Slice, Struct, Interface,Function,Channel,Pointer)
+复合类型(8 种): Map, Array,Slice, Struct, Interface,Function,Channel,Pointer
 
 
 ### 操作符
