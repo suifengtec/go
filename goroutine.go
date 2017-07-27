@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-07-27 08:47:31
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-27 09:06:03
+* @Last Modified time: 2017-07-27 09:13:17
 */
 
 package main
@@ -28,6 +28,9 @@ import (
 // WaitGroup 用于等待结束  goroutines
 var wg sync.WaitGroup
 
+/*
+加法表
+ */
 func addTable() {
 
 	//  结束时把 goroutine 的计数器减一
@@ -43,6 +46,9 @@ func addTable() {
 	}
 }
 
+/*
+乘法表
+ */
 func multiTable() {
 
 	//  结束时把 goroutine 的计数器减一
