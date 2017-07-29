@@ -67,3 +67,9 @@ v3 := <-ch2
 ## goroutine
 
 Go 可让函数或方法并发运行,仅需在方法或函数的前面加上关键词 `go` 即可。
+
+## 示例
+
+### mysql-and-rest-api-and-cli
+
+一个简单的示例程序: 如何通过 CLI 或 REST API 对存储在 MySQL 中的数据进行增删改查。
