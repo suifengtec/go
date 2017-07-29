@@ -2,6 +2,8 @@
 
 * The Go Programming Language (Addison-Wesley Professional Computing Series) by Alan A. A. Donovan and Brian W. Kernighan
 
+![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/The%20Go%20Programming%20Language.jpg)
+
 * Go in Practice: Includes 70 Techniques  by Matt Butcher and Matt Farina
 
 ![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/Go%20in%20Practice.jpg)
@@ -25,9 +27,7 @@
 
 * An Introduction to Programming in Go by Caleb Doxsey
 
-![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/an-introduction-to-programming-in-go.png)
-
-![An Introduction to Programming in Go by Caleb Doxsey](https://camo.githubusercontent.com/8471e0db963c095fb313328ed569b7dbb22b0b3f/687474703a2f2f7777772e676f6c616e672d626f6f6b2e636f6d2f7075626c69632f696d672f696e74726f2f636f7665722e302e706e67)
+![An Introduction to Programming in Go by Caleb Doxsey](https://raw.githubusercontent.com/suifengtec/go/master/imgs/an-introduction-to-programming-in-go.png)
 
 * Go Programming Blueprints - Second Edition by Mat Ryer
 
@@ -73,14 +73,11 @@
 
 ![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/Webapps%20in%20Go%20the%20anti%20textbook.jpg)
 
-
-* Go Programming: Questions and Answers by George Duckett
-
 * Go Exercises in Plain Language by Tony de Araujo 
 
 ![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/Go%20Exercises%20in%20Plain%20Language.jpg)
 
-* Creating Web Applications On The Go by Frank Winchester
+
 
 * Microservices in Go by Matthew Campbell  
 
@@ -91,19 +88,32 @@
 
 ![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/Go%20Recipes%20%20A%20Problem-Solution%20Approach.jpg)
 
-* Writing An Interpreter In Go by  Thorsten Ball 
+
 
 * Learning Go Programming by Vladimir Vivien
 
+![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/Learning%20Go%20Programming.jpg)
+
 * Mastering Go Web Services by Nathan Kozyra
 * Mastering Concurrency in Go by Nathan Kozyra
+
+![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/Mastering%20Concurrency%20in%20Go.jpg)
 
 * [Go Bootcamp by Matt Aimonetti](http://www.golangbootcamp.com/)
 
 * [Building Web Apps with Go](https://www.gitbook.com/book/codegangsta/building-web-apps-with-go/details)
 
 * Go Cookbook by Aaron Torres
+
+![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/Go%20Cookbook.png)
+
 * Go: Design Patterns for Real-World Projects by Mario Castro Contreras, Mat Ryer, Vladimir Vivien
+
+![](https://raw.githubusercontent.com/suifengtec/go/master/imgs/Go%20Design%20Patterns%20for%20Real-World%20Projects.jpg)
+
+* Writing An Interpreter In Go by  Thorsten Ball 
+* Go Programming: Questions and Answers by George Duckett
+* Creating Web Applications On The Go by Frank Winchester
 
 
 ## 中文书/已被翻译的书
