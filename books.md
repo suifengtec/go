@@ -4,13 +4,19 @@
 * Go in Practice: Includes 70 Techniques  by Matt Butcher and Matt Farina
 * Go Web Programming by Sau Sheong Chang
 * Go in Action
+
 ![](https://camo.githubusercontent.com/0a9e7dfdd1e5559223a9dfe89fe765853379b7c6/68747470733a2f2f696d616765732e6d616e6e696e672e636f6d2f3132302f3136302f726573697a652f626f6f6b2f632f343033376435642d653565352d343962662d613363312d3438306265323930376561612f4b656e6e6564792d474f2d48492e706e67)
+
 * Introducing Go: Build Reliable, Scalable Programs by Caleb Doxsey
 * Level Up Your Web Apps With Go: Performance, Concurrency, Scalability by Mal Curtis
 * An Introduction to Programming in Go by Caleb Doxsey
+
 ![An Introduction to Programming in Go by Caleb Doxsey](https://camo.githubusercontent.com/8471e0db963c095fb313328ed569b7dbb22b0b3f/687474703a2f2f7777772e676f6c616e672d626f6f6b2e636f6d2f7075626c69632f696d672f696e74726f2f636f7665722e302e706e67)
+
 * Go Programming Blueprints - Second Edition by Mat Ryer
+
 ![](https://camo.githubusercontent.com/9a2526d7b3a13dd73d7c99bf26954edd3d64cfd0/68747470733a2f2f647a313377386166643437696c2e636c6f756466726f6e742e6e65742f73697465732f64656661756c742f66696c65732f696d61676563616368652f707076345f6d61696e5f626f6f6b5f636f7665722f38393439636f765f2e6a7067)
+
 * Network Programming with Go: Essential Skills for Using and Securing Networks by Jan Newmarch
 * Go: Building Web Applications by Nathan Kozyra and Mat Ryer
 * Go Design Patterns by Mario Castro Contreras
@@ -20,7 +26,9 @@
 * Learning Go Web Development by Nathan Kozyra
 * Go: Up and Running by Alan Harris
 * [Go for Javascript Developers by Maor Zamski,Daniel Singer](https://github.com/pazams/go-for-javascript-developers)
+
 ![](https://raw.githubusercontent.com/bulim/go-for-javascript-developers/master/images/thumb.png)
+
 * Webapps in Go the anti textbook by thewhitetulip
 * Web Development with Go by Jonathan Calhoun
 * Go Programming: Questions and Answers by George Duckett
