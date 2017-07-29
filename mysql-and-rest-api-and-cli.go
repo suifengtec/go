@@ -2,13 +2,10 @@
 * @Author: Administrator
 * @Date:   2017-07-28 13:13:55
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-29 12:09:34
+* @Last Modified time: 2017-07-29 12:12:28
 */
 
 /*
-
-https://www.youtube.com/watch?v=t96hBT53S4U
-
 
 http://localhost:12345/people/2
 
