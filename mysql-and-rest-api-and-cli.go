@@ -2,7 +2,7 @@
 * @Author: Administrator
 * @Date:   2017-07-29 10:53:16
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-29 12:14:48
+* @Last Modified time: 2017-07-29 12:15:32
 */
 
 /*
@@ -443,7 +443,7 @@ func main() {
         /*
         
         {
-            "Username":"王雁平",
+            "Username":"雁平",
             "Departname":"总办"
         }
          */
