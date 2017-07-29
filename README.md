@@ -68,6 +68,12 @@ v3 := <-ch2
 
 Go 可让函数或方法并发运行,仅需在方法或函数的前面加上关键词 `go` 即可。
 
+
+### 相关书籍
+
+[点这里会爆炸吗?](https://github.com/suifengtec/go/blob/master/books.md)
+
+
 ## 示例
 
 ### mysql-and-rest-api-and-cli
