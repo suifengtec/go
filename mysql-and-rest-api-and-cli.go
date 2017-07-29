@@ -2,46 +2,44 @@
 * @Author: Administrator
 * @Date:   2017-07-29 10:53:16
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-07-29 12:15:32
-*/
+* @Last Modified time: 2017-07-29 12:21:49
+ */
 
 /*
 
-CREATE TABLE `pfm`.`userinfo` ( 
-`uid` INT(10)  NOT NULL AUTO_INCREMENT , 
+CREATE TABLE `pfm`.`userinfo` (
+`uid` INT(10)  NOT NULL AUTO_INCREMENT ,
 `username` VARCHAR(64)  NULL DEFAULT NULL ,
  `departname` VARCHAR(64)  NULL DEFAULT NULL ,
-  `created` DATE  DEFAULT NULL , 
+  `created` DATE  DEFAULT NULL ,
   PRIMARY KEY (`uid`)
  ) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
 
 
 
 CREATE TABLE `pfm`.`userdetail` (
-    
+
     `uid` INT(10) NOT NULL DEFAULT '0',
     `intro` TEXT NULL,
     `profile` TEXT NULL,
     PRIMARY KEY(`uid`)
 )ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci;
- */
+*/
 package main
 
 import (
-    
     "fmt"
-    
+
+    "database/sql"
+    _ "github.com/go-sql-driver/mysql"
     "log"
     "os"
     "strconv"
     "strings"
-    "database/sql"
-    _ "github.com/go-sql-driver/mysql"
-
 
     "encoding/json"
-    "net/http"
     _ "github.com/gorilla/mux"
+    "net/http"
 )
 
 const (
@@ -50,27 +48,23 @@ const (
     dbName         string = "pfm"
     dbUserName     string = "root"
     dbUserPassword string = "mysql"
-    RestPort string = "6699"
+    RestPort       string = "6699"
 )
 
-
-
 type Person struct {
-    ID        string   `json:"id,omitempty"`
-    Username string   `json:"username,omitempty"`
-    Departname  string   `json:"departname,omitempty"`
-    Created  string   `json:"created,omitempty"`
-    UserDetail   *UserDetail `json:"userdetail,omitempty"`
+    ID         string      `json:"id,omitempty"`
+    Username   string      `json:"username,omitempty"`
+    Departname string      `json:"departname,omitempty"`
+    Created    string      `json:"created,omitempty"`
+    UserDetail *UserDetail `json:"userdetail,omitempty"`
 }
- 
 
- type UserDetail struct {
-    Intro  string `json:"intro,omitempty"`
+type UserDetail struct {
+    Intro   string `json:"intro,omitempty"`
     Profile string `json:"proflie,omitempty"`
 }
- 
-var people []Person
 
+var people []Person
 
 func GetPersonEndpoint(w http.ResponseWriter, req *http.Request) {
     params := mux.Vars(req)
@@ -83,35 +77,34 @@ func GetPersonEndpoint(w http.ResponseWriter, req *http.Request) {
     SetHeader(w)
     json.NewEncoder(w).Encode(&Person{})
 }
- 
+
 func GetPeopleEndpoint(w http.ResponseWriter, req *http.Request) {
     SetHeader(w)
     json.NewEncoder(w).Encode(people)
 }
- 
+
 func CreatePersonEndpoint(w http.ResponseWriter, req *http.Request) {
-    
-   /* params := mux.Vars(req)*/
+
+    /* params := mux.Vars(req)*/
     var person Person
     _ = json.NewDecoder(req.Body).Decode(&person)
-   
 
     /*数据库中创建*/
-    id:= Insert( person.Username, person.Departname)
+    id := Insert(person.Username, person.Departname)
     person.ID = strconv.Itoa(id)
     /*  person.ID = aaa*/
     people = append(people, person)
     SetHeader(w)
     json.NewEncoder(w).Encode(people)
 }
- 
+
 func DeletePersonEndpoint(w http.ResponseWriter, req *http.Request) {
 
     params := mux.Vars(req)
     for index, item := range people {
         if item.ID == params["id"] {
             people = append(people[:index], people[index+1:]...)
-            id,_ := strconv.Atoi(params["id"])
+            id, _ := strconv.Atoi(params["id"])
             Delete(id)
             break
         }
@@ -120,14 +113,12 @@ func DeletePersonEndpoint(w http.ResponseWriter, req *http.Request) {
     json.NewEncoder(w).Encode(people)
 }
 
-func SetHeader(w http.ResponseWriter){
+func SetHeader(w http.ResponseWriter) {
 
-     w.Header().Set("Content-Type", "application/json")
+    w.Header().Set("Content-Type", "application/json")
 }
 
-
-func getPeople(){
-
+func getPeople() {
 
     db, err := ConnectDB()
 
@@ -150,23 +141,20 @@ func getPeople(){
         }
 
         /*获取userDetail*/
-        _,intro, profile := GetUserDetailByUid( uid)
+        _, intro, profile := GetUserDetailByUid(uid)
 
-        if len(intro)>1||len(profile)>1 {
-            people = append(people, Person{ID: fmt.Sprintf("%d", uid), Username: username, Departname: departname,Created:created, UserDetail: &UserDetail{Profile: profile, Intro: intro}})
+        if len(intro) > 1 || len(profile) > 1 {
+            people = append(people, Person{ID: fmt.Sprintf("%d", uid), Username: username, Departname: departname, Created: created, UserDetail: &UserDetail{Profile: profile, Intro: intro}})
 
-        }else{
-            people = append(people, Person{ID: fmt.Sprintf("%d", uid), Username: username, Departname: departname,Created:created})
+        } else {
+            people = append(people, Person{ID: fmt.Sprintf("%d", uid), Username: username, Departname: departname, Created: created})
         }
 
     }
 
-
 }
- 
 
-
-func GetUserDetailByUid(id int)( int, string, string ) {
+func GetUserDetailByUid(id int) (int, string, string) {
 
     db, err := ConnectDB()
 
@@ -177,20 +165,18 @@ func GetUserDetailByUid(id int)( int, string, string ) {
     row := db.QueryRow("SELECT * FROM userdetail WHERE uid=?", id)
 
     var (
-        uid        int
+        uid     int
         intro   string
         profile string
-
     )
     err = row.Scan(&uid, &intro, &profile)
 
-    if nil != err{
-        return uid ,intro, profile
+    if nil != err {
+        return uid, intro, profile
     }
-    return  uid ,intro, profile
+    return uid, intro, profile
 
 }
-
 
 func checkErr(err error) {
 
@@ -316,7 +302,6 @@ func Update(id int, uName string) {
 
     checkErr(err)
 
-
     res, err := stmt.Exec(uName, id)
 
     checkErr(err)
@@ -338,7 +323,7 @@ func Update(id int, uName string) {
 
 }
 
-func Delete(id int)  {
+func Delete(id int) {
 
     db, err := ConnectDB()
     if err != nil {
@@ -366,7 +351,7 @@ func Delete(id int)  {
 
     log.Println(affect)
 
-/*  return true*/
+    /*  return true*/
 
 }
 
@@ -376,10 +361,6 @@ func Delete(id int)  {
 
 */
 func main() {
-
-
-
-
 
     if len(os.Args) > 2 {
 
@@ -425,38 +406,36 @@ func main() {
         router := mux.NewRouter()
 
         /*
-        运行后对数据库的修改不能及时反馈,也就是说查询是一次性的。
-         */
+           运行后对数据库的修改不能及时反馈,也就是说查询是一次性的。
+        */
         getPeople()
 
-
         /*
-        
-        [{"id":"22","username":"李四光","departname":"销售部门"},{"id":"23","username":"张三","departname":"科技"},{"id":"24","username":"李四","departname":"销售"},{"id":"25","username":"马兵地","departname":"总办"},{"id":"27","username":"吕桂花","departname":"公关部"}]
+
+           [{"id":"22","username":"李四光","departname":"销售部门"},{"id":"23","username":"张三","departname":"科技"},{"id":"24","username":"李四","departname":"销售"},{"id":"25","username":"马兵地","departname":"总办"},{"id":"27","username":"吕桂花","departname":"公关部"}]
 
 
-         */
+        */
         router.HandleFunc("/people", GetPeopleEndpoint).Methods("GET")
         router.HandleFunc("/people/{id}", GetPersonEndpoint).Methods("GET")
 
         /*创建*/
         /*
-        
-        {
-            "Username":"雁平",
-            "Departname":"总办"
-        }
-         */
+
+                {
+                    "Username":"王雁平",
+                    "Departname":"总办"
+                }
+        */
         router.HandleFunc("/people/", CreatePersonEndpoint).Methods("POST")
-        
+
         /*删除*/
         router.HandleFunc("/people/{id}", DeletePersonEndpoint).Methods("DELETE")
 
         fmt.Println("\n")
-        fmt.Println("浏览器打开 \nhttp://localhost:"+RestPort+"/people\n")
-        fmt.Println("可用的链接 \nhttp://localhost:"+RestPort+"/people/uid\n")
+        fmt.Println("浏览器打开 \nhttp://localhost:" + RestPort + "/people\n")
+        fmt.Println("可用的链接 \nhttp://localhost:" + RestPort + "/people/uid\n")
         log.Fatal(http.ListenAndServe(":"+RestPort, router))
-
 
     }
 
