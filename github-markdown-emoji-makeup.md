@@ -1,4 +1,4 @@
-People
+人物
 
 | :bowtie: `:bowtie:` | :smile: `:smile:` | :laughing: `:laughing:` |
 |---|---|---|
@@ -67,7 +67,7 @@ People
 | :rage2: `:rage2:` | :rage3: `:rage3:` | :rage4: `:rage4:` |
 | :suspect: `:suspect:` | :trollface: `:trollface:` | 
 
-Nature
+自然
 
 | :sunny: `:sunny:` | :umbrella: `:umbrella:` | :cloud: `:cloud:` |
 |---|---|---|
@@ -110,7 +110,7 @@ Nature
 | :milky_way: `:milky_way:` | :partly_sunny: `:partly_sunny:` | :octocat: `:octocat:` |
 | :squirrel: `:squirrel:` |
 
-Objects
+物体
 
 | :bamboo: `:bamboo:` | :gift_heart: `:gift_heart:` | :dolls: `:dolls:` |
 |---|---|---|
@@ -201,7 +201,7 @@ Objects
 | :sweet_potato: `:sweet_potato:` | :eggplant: `:eggplant:` | :tomato: `:tomato:` |
 | :corn: `:corn:` |
 
-Places
+处所
 
 | :house: `:house:` | :house_with_garden: `:house_with_garden:` | :school: `:school:` |
 |---|---|---|
@@ -241,7 +241,7 @@ Places
 | :ru: `:ru:` | :gb: `:gb:` | :uk: `:uk:` |
 | :de: `:de:` |
 
-Symbols
+符号
 
 | :one: `:one:` | :two: `:two:` | :three: `:three:` |
 |---|---|---|
