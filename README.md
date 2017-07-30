@@ -42,15 +42,21 @@ mkdir src && mkdir bin && mkdir pkg && cd src && touch main.go && git init && gi
 ### 类型系统
 
 
-基础类型(分布尔，数值，字符串三类19种): string,bool, byte(int8的别名),rune(int32的别名), int/uint, unit8/uint8, int16/uint16, int32/uint32, int64/unit64, float32,float64,complex64,copmlex128, uintptr
+基础类型(分布尔，数值，字符串三类19种): 
+```
+string,bool, byte(int8的别名),rune(int32的别名), int/uint, unit8/uint8, int16/uint16, int32/uint32, int64/unit64, float32,float64,complex64,copmlex128, uintptr
+```
 
-聚合类型(2种):  array, struct;
-
-引用数据类型(5种): pointer,slice,map,func,channel;
+聚合类型(2种):  
+```
+array, struct
+```
+引用数据类型(5种): 
+```
+pointer,slice,map,func,channel
+```
 
 接口类型(2种): interface,error
-
-
 
 
 ### 预置
