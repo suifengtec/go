@@ -76,7 +76,7 @@ v3 := <-ch2
 
 ## 相关书籍
 
-[点这里会爆炸吗?](https://github.com/suifengtec/go/blob/master/books.md)
+[点这里地球就会爆炸,你信吗?](https://github.com/suifengtec/go/blob/master/books.md)
 
 
 ## 示例
