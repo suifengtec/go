@@ -1,6 +1,6 @@
-# Golang Test
+# Golang 基础和测试
 
-Go语言。
+Go语言基础和测试。
 
 ## Windows 环境变量
 
