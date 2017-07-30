@@ -18,7 +18,7 @@ Go语言基础,测试,相关书籍以及 Web 框架。
 
 基础类型(分布尔，数值，字符串三类19种): 
 ```
-string,bool, byte(int8的别名),rune(int32的别名), int/uint, unit8/uint8, int16/uint16, int32/uint32, int64/unit64, float32,float64,complex64,copmlex128, uintptr
+string,bool, byte(uint8的别名),rune(int32的别名), int/uint, unit8/uint8, int16/uint16, int32/uint32, int64/unit64, float32,float64,complex64,copmlex128, uintptr
 ```
 
 聚合类型(2种):  
