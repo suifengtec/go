@@ -17,3 +17,5 @@ echo %GOPATH%
 mkdir src && mkdir bin && mkdir pkg && cd src && touch main.go && git init && git config --local core.autocrlf false && git add . &&  && sublime_text main.go && git add . git commit -m "init" && cd ..
 
 ```
+
+
