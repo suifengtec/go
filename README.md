@@ -117,5 +117,5 @@ Go 编译的可执行程序是 1604KB;
 * [Beego](https://beego.me/)： 国人谢孟军做的一个工具化了的全功能 Web 框架，支持模块化开发，在国内很火，它有一个强大的ORM系统，但它在页面缓存（缓存了前几个版本的页面）和多第三方扩展的支持上有所欠缺。
 * [Buffalo](https://github.com/gobuffalo/buffalo)： 和Beego, Revel 一样会生成你不熟悉的代码。
 * :+1:[Ego](https://github.com/go-ego/ego)：一个基于 Gin 用 Go 编写的全栈 Web 框架，轻量级和高效的前端组件解决方案. 前端编译执行，不影响后端效率。
-* :+1::+1::+1:[Iris](https://github.com/kataras/iris)： 比较新,很炫,自称是地球上最快的 Go 语言 Web 框架, [相关文档](https://www.gitbook.com/book/suifengtec/iris-cn/details)。
+* :+1::+1::+1:[Iris](https://github.com/kataras/iris)： 比较新,很炫,自称是地球上最快的 Go 语言 Web 框架, [相关文档](https://suifengtec.gitbooks.io/iris-cn/content/)。
 
