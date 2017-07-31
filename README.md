@@ -30,6 +30,8 @@ array, struct
 pointer,slice,map,func,channel
 ```
 
+[数组,切片和字典/映射的示例](https://github.com/suifengtec/go/tree/master/array-slice-map)
+
 接口类型(2种): interface,error
 
 
